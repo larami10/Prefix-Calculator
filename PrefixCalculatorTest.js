@@ -4,17 +4,17 @@ var c = new Calc();
 
 // Expressions used to call c.calc() function
 console.log('Expresion passed to Prefix Calculator: {"op":"add", "number": 5}');
-console.log("returns: " + c.calc('{"op":"add", "number": 5}')); // returns 5 (assumes a starting init value of 0)
+console.log("return: " + c.calc('{"op":"add", "number": 5}')); // returns 5 (assumes a starting init value of 0)
 
 console.log(
   '\nExpresion passed to Prefix Calculator: {"op":"subtract", "number": 2}'
 );
-console.log("returns: " + c.calc('{"op":"subtract", "number": 2}')); // returns 3 (5-2)
+console.log("return: " + c.calc('{"op":"subtract", "number": 2}')); // returns 3 (5-2)
 
 console.log(
   '\nExpresion passed to Prefix Calculator: {"op":"add", "number": 19}'
 );
-console.log("returns: " + c.calc('{"op":"add", "number": 19}')); // returns 22 (19+3)
+console.log("return: " + c.calc('{"op":"add", "number": 19}')); // returns 22 (19+3)
 
 console.log("\n\n\n");
 
@@ -41,20 +41,20 @@ console.log("TESTING calc using nested expressions (expr)");
 
 console.log(
   'Expresion passed to Prefix Calculator: {"op": "subtract", "expr" : {"op" : "add", "number" : 15}}'
-); // returns 0 (22+15 = 37, then 37-37=0)
+);
 console.log(
-  "returns: " +
+  "return: " +
     c.calc('{"op": "subtract", "expr" : {"op" : "add", "number" : 15}}')
 ); // returns 0 (22+15 = 37, then 37-37=0)
 
 console.log(
   '\nExpresion passed to Prefix Calculator: {"op": "add", "expr" : {"op" : "add", "expr" : {"op" : "subtract", "number" : 3}}}'
-); // returns 0 (22+15 = 37, then 37-37=0)
+);
 console.log(
-  c.calc(
-    "returns: " +
+  "return: " +
+    c.calc(
       '{"op": "add", "expr" : {"op" : "add", "expr" : {"op" : "subtract", "number" : 3}}}'
-  )
+    )
 ); // returns -12 (0-3=-3, -3+-3=-6, -6+-6=-12)
 
 console.log("\n\n\n");

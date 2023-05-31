@@ -100,12 +100,7 @@ class PreCalc {
           return "The stack is empty!";
         } else {
           // return the popped value and print current stack
-          return (
-            "return popped: " +
-            this.popped +
-            "\nstack: " +
-            print(this.calcStack)
-          );
+          return "return: " + this.popped + "\nstack: " + print(this.calcStack);
         }
         // if this.isPrint is true
       } else if (this.isPrint === true) {
@@ -114,7 +109,7 @@ class PreCalc {
         // else
       } else {
         // return this.top value and print the current stack
-        return "return top: " + this.top + "\nstack: " + print(this.calcStack);
+        return "return: " + this.top + "\nstack: " + print(this.calcStack);
       }
     };
 
@@ -172,6 +167,8 @@ this.exec = function (expA) {
 
   // loop through expressions in expA array
   for (let i = 0; i < expA.length; i++) {
+    console.log("Expression being tested: " + JSON.stringify(expA[i].exp));
+
     // call c.calc() to verify that the return value is equal to the expected value
     console.log(
       "expected: " +
