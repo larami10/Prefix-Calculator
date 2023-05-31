@@ -33,4 +33,4 @@ Load test file:
 .load PrefixCalculatorTest.js
 ```
 
-> **_NOTE:_** You may need to open the PrefixCalculatorTest.js file to see the expressions being tested by exec()
+> **_NOTE:_** The starting value is 0. After the non-nested expressions are calculated the value is 22 which is the starting value for the nested expression. After the nested expressions are calculated the value is back to 0 which is the starting value for the stack expressions.
